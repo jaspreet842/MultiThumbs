@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
 }
-/* Header of the services page */
+
+/* Header of the page */
+
+/* Background Image in the Header */
 #headingBg {
     background-image: linear-gradient(135deg, rgba(52, 152, 219, 0.7) 0%,rgba(243, 65, 65, 0.7) 100%), url("https://multithumbs.in/wp-content/uploads/2020/01/about-bg-img.jpg");
     background-repeat: no-repeat;
@@ -10,35 +13,39 @@
     background-attachment: fixed;
     background-size: cover;
 }
+/* Text Heading with paper fold animation.*/
 #heading{
     position: absolute;
-    margin: 0;
-    padding: 0;
     text-align: center;
     top: 24%;
     left: 50%;
-    font-weight: normal;
     font-size: 5em;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
     transform: translate3d(-50%,-50%,0);
     display: flex;
     justify-content: center;
-    transform: rotateX(35deg), translateY(-50%);
     transition: transform .3s ease-in-out;
 }
 #heading span{
-    padding: 0 1.2rem;
     display: block;
     color: #ccc;
     background-color: #fff;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 40px 50px rgba(0,0,0,0.1);
+    width: 90px;
+    height: 100px;
 }
+#heading span:nth-child(odd){
+    transform: skewY(-15deg);
+}
+#heading span:nth-child(even){
+    transform: skewY(15deg);
+}
+#heading:hover span{
+    transform: skewY(0deg);
+}
+/* Header's Content  */
 #headerContent{
     position: absolute;
-    margin: 0;
-    padding: 0;
+    width: 100%;
     color: #fff;
     text-align: center;
     top: 40%;
@@ -47,5 +54,142 @@
     font-size: 2em;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
     transform: translate3d(-50%,-50%,0);
-    animation: appear 2s 1 ;
 }
+/* Responsive Design for whole header */
+@media only screen and (max-width:750px){
+    #heading{
+        font-size: 4rem;
+    }
+    #heading span{
+        width: 70px;
+        height: 80px;
+    }
+}
+@media only screen and (max-width:600px){
+    #heading{
+        font-size: 3rem;
+    }
+    #heading span{
+        width: 50px;
+        height: 60px;
+    }
+    #headerContent{
+        font-size: 1.45rem;
+    }
+}
+@media only screen and (max-width:400px){
+    #heading{
+        font-size: 2rem;
+    }
+    #heading span{
+        width: 30px;
+        height: 40px;
+    }
+    #headerContent{
+        top: 35%;
+        font-size: 1rem;
+    }
+}
+
+/* What We Do Section */
+
+/* Heading of this section */
+#slider{
+    position: relative;
+    width:100%;
+    height:30vw;
+    margin:80px auto;
+    font-family:'Helvetica Neue',sans-serif ;
+    display: flex;
+    perspective:1500px;
+    transform-style: preserve-3d;
+}
+input[type=radio]{
+    position: relative;
+    top:108%;
+    left:50%;
+    width:18px;
+    height: 18px;
+    margin:1rem 15px 0 0;
+    opacity:0.4;
+    transform:translateX(-83px);
+}
+/* input[type=radio]:nth-child(3){
+    margin-right:0px;
+} */
+input[type=radio]:checked{
+    opacity:1;
+}
+#slider label{
+    position:absolute;
+    width:60%;
+    height:100%;
+    top:0;
+    left:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 4rem;
+    transition:all 400ms ease-in-out;
+}
+.cardHead{
+    display: flex;
+    /* width: 100%; */
+}
+.cardTitle{
+    align-self: center;
+}
+#slide1{
+    background:rgba(0, 0, 0, 0.6) url('https://hbr.org/resources/images/article_assets/2018/08/R1805D_CHIN-1200x564.jpg') no-repeat center/cover;
+    background-blend-mode: darken;
+}
+#slide2{
+    background:rgba(0, 0, 0, 0.6) url('https://ssir.org/images/blog/iStockmachinelearning592x333.jpg') no-repeat center/cover;
+    background-blend-mode: darken;
+}
+#slide3{
+    background:rgba(0, 0, 0, 0.6) url('https://www.newbreedmarketing.com/hs-fs/hubfs/shutterstock_443845528-1.jpg?width=4800&name=shutterstock_443845528-1.jpg') no-repeat center/cover;
+    background-blend-mode: darken;
+}
+#slide4{
+    background:rgba(0, 0, 0, 0.6) url('https://econsultancy.imgix.net/content/uploads/2018/09/04155306/social-media-image-.jpg') no-repeat center/cover;
+    background-blend-mode: darken;
+}
+#slide5{
+    background:rgba(0, 0, 0, 0.6) url('https://www.x-cart.com/wp-content/uploads/2019/01/ecommerce-768x278.jpg') no-repeat center/cover;
+    background-blend-mode: darken;
+}
+#slide6{
+    background:rgba(0, 0, 0, 0.6) url('https://www.tophelpline.com/images/contact%20Gmail%20support%20by%20phone.jpg') no-repeat center/cover;
+    background-blend-mode: darken;
+}
+/*slider function*/
+#s1:checked ~ #slide1,#s2:checked ~ #slide2,#s3:checked ~ #slide3,#s4:checked ~ #slide4,#s5:checked ~ #slide5,#s6:checked ~ #slide6{
+    box-shadow:0 13px 26px rgba(0,0,0,0.3), 0 12px 6px rgba(0,0,0,0.2);
+    transform: translate3d(36%,0,0px);
+}
+#s1:checked ~ #slide2,#s2:checked ~ #slide3,#s3:checked ~ #slide4,#s4:checked ~ #slide5,#s5:checked ~ #slide6,#s6:checked ~ #slide1{
+    box-shadow:0 6px 10px rgba(0,0,0,0.3), 0 2px 2px rgba(0,0,0,0.2);
+    transform: translate3d(54%,0,-100px);
+}
+#s1:checked ~ #slide3,#s2:checked ~ #slide4,#s3:checked ~ #slide5,#s4:checked ~ #slide6,#s5:checked ~ #slide1,#s6:checked ~ #slide2{
+    box-shadow:0 3px 5px rgba(0,0,0,0.3), 0 1px 1px rgba(0,0,0,0.2);
+    transform: translate3d(68%,0,-200px);
+}
+#s1:checked ~ #slide4,#s2:checked ~ #slide5,#s3:checked ~ #slide6,#s4:checked ~ #slide1,#s5:checked ~ #slide2,#s6:checked ~ #slide3{
+    /* box-shadow:0 3px 5px rgba(0,0,0,0.3), 0 1px 1px rgba(0,0,0,0.2); */
+    transform: translate3d(36%,0,-300px);
+}
+#s1:checked ~ #slide5,#s2:checked ~ #slide6,#s3:checked ~ #slide1,#s4:checked ~ #slide2,#s5:checked ~ #slide3,#s6:checked ~ #slide4{
+    box-shadow:0 3px 5px rgba(0,0,0,0.3), 0 1px 1px rgba(0,0,0,0.2);
+    transform: translate3d(0%,0,-200px);
+}
+#s1:checked ~ #slide6,#s2:checked ~ #slide1,#s3:checked ~ #slide2,#s4:checked ~ #slide3,#s5:checked ~ #slide4,#s6:checked ~ #slide5{
+    box-shadow:0 6px 10px rgba(0,0,0,0.3), 0 2px 2px rgba(0,0,0,0.2);
+    transform: translate3d(18%,0,-100px);
+}
+
+/*Responsive design for home carosule*/
+@media only screen and (max-width: 600px){}

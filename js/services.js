@@ -2,7 +2,7 @@ let width, height, largeContainer, canvas, ctx, circles, target, animateHeader =
 initHeader();
 addListeners();
 function initHeader() {
-    width = window.innerWidth;
+    width = window.innerWidth/1.1;
     height = window.innerHeight/1.435;
     target = { x: 0, y: height };
     largeContainer = document.getElementById('headingBg');
@@ -34,7 +34,7 @@ function scrollCheck() {
 }
 
 function resize() {
-    width = window.innerWidth;
+    width = window.innerWidth/1.1;
     height = (window.innerHeight)/1.5;
     largeContainer.style.height = 70 + 'vh';
     canvas.width = width;
