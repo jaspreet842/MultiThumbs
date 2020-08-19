@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Header of the services page */
+#headingBg {
+    background-image: linear-gradient(135deg, rgba(52, 152, 219, 0.7) 0%,rgba(243, 65, 65, 0.7) 100%), url("https://multithumbs.in/wp-content/uploads/2020/01/about-bg-img.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#heading{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    top: 24%;
+    left: 50%;
+    font-weight: normal;
+    font-size: 5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    transform: translate3d(-50%,-50%,0);
+    display: flex;
+    justify-content: center;
+    transform: rotateX(35deg), translateY(-50%);
+    transition: transform .3s ease-in-out;
+}
+#heading span{
+    padding: 0 1.2rem;
+    display: block;
+    color: #ccc;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 40px 50px rgba(0,0,0,0.1);
+}
+#headerContent{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    top: 40%;
+    left: 50%;
+    font-weight: normal;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    transform: translate3d(-50%,-50%,0);
+    animation: appear 2s 1 ;
+}
