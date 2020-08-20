@@ -30,6 +30,7 @@
     display: block;
     color: #ccc;
     background-color: #fff;
+    border: 0.1px solid #ccc;
     width: 90px;
     height: 100px;
 }
@@ -94,6 +95,21 @@
 /* What We Do Section */
 
 /* Heading of this section */
+#bgGrey{
+    background-color: #d5d5d5;
+    text-align: center;
+}
+#whatWeDo{
+    padding-left: 2rem;
+}
+#whatWeDo h1{
+    color: #2c2c2c;
+    letter-spacing: .05em;
+    text-shadow: 
+      4px 4px 0px #d5d5d5, 
+      7px 7px 0px rgba(0, 0, 0, 0.2);
+}
+/* Card Sliders */
 #slider{
     position: relative;
     width:100%;
@@ -114,9 +130,6 @@ input[type=radio]{
     opacity:0.4;
     transform:translateX(-83px);
 }
-/* input[type=radio]:nth-child(3){
-    margin-right:0px;
-} */
 input[type=radio]:checked{
     opacity:1;
 }
@@ -128,19 +141,22 @@ input[type=radio]:checked{
     left:0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    background-color: white;
     padding: 4rem;
     transition:all 400ms ease-in-out;
 }
 .cardHead{
     display: flex;
-    /* width: 100%; */
+    justify-content: center;
+    width: 100%;
 }
 .cardTitle{
     align-self: center;
 }
+/* 
 #slide1{
     background:rgba(0, 0, 0, 0.6) url('https://hbr.org/resources/images/article_assets/2018/08/R1805D_CHIN-1200x564.jpg') no-repeat center/cover;
     background-blend-mode: darken;
@@ -164,7 +180,7 @@ input[type=radio]:checked{
 #slide6{
     background:rgba(0, 0, 0, 0.6) url('https://www.tophelpline.com/images/contact%20Gmail%20support%20by%20phone.jpg') no-repeat center/cover;
     background-blend-mode: darken;
-}
+} */
 /*slider function*/
 #s1:checked ~ #slide1,#s2:checked ~ #slide2,#s3:checked ~ #slide3,#s4:checked ~ #slide4,#s5:checked ~ #slide5,#s6:checked ~ #slide6{
     box-shadow:0 13px 26px rgba(0,0,0,0.3), 0 12px 6px rgba(0,0,0,0.2);
@@ -179,7 +195,6 @@ input[type=radio]:checked{
     transform: translate3d(68%,0,-200px);
 }
 #s1:checked ~ #slide4,#s2:checked ~ #slide5,#s3:checked ~ #slide6,#s4:checked ~ #slide1,#s5:checked ~ #slide2,#s6:checked ~ #slide3{
-    /* box-shadow:0 3px 5px rgba(0,0,0,0.3), 0 1px 1px rgba(0,0,0,0.2); */
     transform: translate3d(36%,0,-300px);
 }
 #s1:checked ~ #slide5,#s2:checked ~ #slide6,#s3:checked ~ #slide1,#s4:checked ~ #slide2,#s5:checked ~ #slide3,#s6:checked ~ #slide4{
@@ -191,5 +206,63 @@ input[type=radio]:checked{
     transform: translate3d(18%,0,-100px);
 }
 
-/*Responsive design for home carosule*/
-@media only screen and (max-width: 600px){}
+/*Responsive design for card carosule*/
+@media only screen and (max-width: 800px){
+    #slider{
+        height: 50vw;
+    }
+    #slider label{
+        padding: 1rem;
+    }
+    .cardHead{
+        font-size: 1.5rem;
+    }
+    #whatWeDo{
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 600px){
+    #whatWeDo h1{
+        font-size: 2rem;
+    }
+    #slider{
+        height: 70vw;
+    }
+    #slider label{
+        width: 80%;
+    }
+    #s1:checked ~ #slide1,#s2:checked ~ #slide2,#s3:checked ~ #slide3,#s4:checked ~ #slide4,#s5:checked ~ #slide5,#s6:checked ~ #slide6{
+        box-shadow:0 13px 26px rgba(0,0,0,0.3), 0 12px 6px rgba(0,0,0,0.2);
+        transform: translate3d(15%,0,0px);
+    }
+    #s1:checked ~ #slide2,#s2:checked ~ #slide3,#s3:checked ~ #slide4,#s4:checked ~ #slide5,#s5:checked ~ #slide6,#s6:checked ~ #slide1{
+        box-shadow:0 6px 10px rgba(0,0,0,0.3), 0 2px 2px rgba(0,0,0,0.2);
+        transform: translate3d(24%,0,-100px);
+    }
+    #s1:checked ~ #slide3,#s2:checked ~ #slide4,#s3:checked ~ #slide5,#s4:checked ~ #slide6,#s5:checked ~ #slide1,#s6:checked ~ #slide2{
+        box-shadow:0 3px 5px rgba(0,0,0,0.3), 0 1px 1px rgba(0,0,0,0.2);
+        transform: translate3d(33%,0,-200px);
+    }
+    #s1:checked ~ #slide4,#s2:checked ~ #slide5,#s3:checked ~ #slide6,#s4:checked ~ #slide1,#s5:checked ~ #slide2,#s6:checked ~ #slide3{
+        transform: translate3d(15%,0,-300px);
+    }
+    #s1:checked ~ #slide5,#s2:checked ~ #slide6,#s3:checked ~ #slide1,#s4:checked ~ #slide2,#s5:checked ~ #slide3,#s6:checked ~ #slide4{
+        box-shadow:0 3px 5px rgba(0,0,0,0.3), 0 1px 1px rgba(0,0,0,0.2);
+        transform: translate3d(-3%,0,-200px);
+    }
+    #s1:checked ~ #slide6,#s2:checked ~ #slide1,#s3:checked ~ #slide2,#s4:checked ~ #slide3,#s5:checked ~ #slide4,#s6:checked ~ #slide5{
+        box-shadow:0 6px 10px rgba(0,0,0,0.3), 0 2px 2px rgba(0,0,0,0.2);
+        transform: translate3d(6%,0,-100px);
+    }
+}
+@media only screen and (max-width: 600px){
+    #whatWeDo h1{
+        font-size: 2rem;
+    }
+    #slider{
+        height: 120vw;
+    }
+    #slider label{
+        padding: 0.8rem;
+    }
+}
