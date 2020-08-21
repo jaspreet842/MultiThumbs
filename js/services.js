@@ -2,8 +2,8 @@ let width, height, largeContainer, canvas, ctx, circles, target, animateHeader =
 initHeader();
 addListeners();
 function initHeader() {
-    width = window.innerWidth/1.1;
-    height = window.innerHeight/1.435;
+    width = window.innerWidth / 1.03;
+    height = window.innerHeight / 1.435;
     target = { x: 0, y: height };
     largeContainer = document.getElementById('headingBg');
     largeContainer.style.height = 70 + 'vh';
@@ -13,8 +13,8 @@ function initHeader() {
     ctx = canvas.getContext('2d');
     // create particles
     circles = [];
-    for (var x = 0; x < width * 0.5; x++) {
-        var c = new Circle();
+    for (let x = 0; x < width * 0.5; x++) {
+        let c = new Circle();
         circles.push(c);
     }
     animate();
@@ -34,8 +34,8 @@ function scrollCheck() {
 }
 
 function resize() {
-    width = window.innerWidth/1.1;
-    height = (window.innerHeight)/1.5;
+    width = window.innerWidth / 1.03;
+    height = (window.innerHeight) / 1.5;
     largeContainer.style.height = 70 + 'vh';
     canvas.width = width;
     canvas.height = height;
@@ -44,7 +44,7 @@ function resize() {
 function animate() {
     if (animateHeader) {
         ctx.clearRect(0, 0, width, height);
-        for (var i in circles)
+        for (let i in circles)
             circles[i].draw();
     }
     requestAnimationFrame(animate);
@@ -74,3 +74,54 @@ function Circle() {
         ctx.fill();
     };
 }
+let checkedSlide = 0;
+let buttons = document.getElementsByTagName('input');
+let slides = document.getElementsByTagName('label');
+for (let i = 0; i < buttons.length; i++) {
+    let startX = 0, endX = 0;
+    slides[i].addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        startX = e.changedTouches[0].pageX;
+    }, false);
+    slides[i].addEventListener('touchmove', (e) => {
+        e.preventDefault();
+    });
+    slides[i].addEventListener('touchend', (e) => {
+        e.preventDefault();
+        endX = e.changedTouches[0].pageX;
+        if (startX > endX)
+            swipeLeft(i);
+        else if (startX < endX)
+            swipeRight(i);
+    }, false);
+}
+function swipeLeft(i) {
+    if(i!=buttons.length-1){
+        buttons[i + 1].checked = true;
+        buttons[i].checked = false;
+        checkedSlide = i+1;
+    }
+    else{
+        buttons[0].checked = true;
+        buttons[i].checked = false;
+        checkedSlide = 0;
+    }
+}
+function swipeRight(i) {
+    if(i!=0){
+        buttons[i - 1].checked = true;
+        buttons[i].checked = false;
+        checkedSlide = i-1;
+    }
+    else{
+        buttons[5].checked = true;
+        buttons[i].checked = false;
+        checkedSlide = 5;
+    }
+}
+document.addEventListener('keydown', (e)=>{
+    if(e.key=="ArrowRight")
+        swipeRight(checkedSlide);
+    else if(e.key == "ArrowLeft")
+        swipeLeft(checkedSlide);
+});
