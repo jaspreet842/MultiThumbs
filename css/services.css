@@ -226,6 +226,13 @@ input[type=radio]:checked{
     }
 }
 @media only screen and (max-width: 600px){
+    .third{
+        float: none;
+        width: 100%;
+    }
+    aside{
+        display: none;
+    }
     #whatWeDo h1{
         font-size: 2rem;
     }
