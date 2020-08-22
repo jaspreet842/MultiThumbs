@@ -2,6 +2,21 @@
     margin: 0;
     padding: 0;
 }
+@font-face{
+    font-family: 'Hattori Hanzo';
+    src: url('../hattori-hanzo/Hattori\ Hanzo.otf');
+}
+h1{
+    font-family: 'Dancing Script', cursive;
+}
+p, button{
+    font-family: 'Hattori Hanzo';
+    font-size: 1.2rem;
+}
+label > h1, h2{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 3rem;
+}
 
 /* Header of the page */
 
@@ -106,15 +121,15 @@
 }
 @media only screen and (max-width:400px){
     #heading{
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     #heading span{
-        width: 30px;
-        height: 40px;
+        width: 35px;
+        height: 45px;
     }
     #headerContent{
         top: 35%;
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }
 
@@ -129,8 +144,9 @@
     padding-left: 2rem;
 }
 #whatWeDo h1{
+    font-size: 3rem;
     color: #2c2c2c;
-    letter-spacing: .05em;
+    letter-spacing: 0.1rem;
     text-shadow: 
       4px 4px 0px #d5d5d5, 
       7px 7px 0px rgba(0, 0, 0, 0.2);
@@ -141,7 +157,6 @@
     width:100%;
     height:30vw;
     margin:80px auto;
-    font-family:'Helvetica Neue',sans-serif ;
     display: flex;
     perspective:1500px;
     transform-style: preserve-3d;
@@ -219,7 +234,13 @@ input[type=radio]:checked{
         padding: 1rem;
     }
     .cardHead{
-        font-size: 1.5rem;
+        font-size: 2.5rem;
+    }
+    .cardHead img {
+        margin-left: -3rem;
+    }
+    .cardContent{
+        font-size: 1rem;
     }
     #whatWeDo{
         padding: 0;
@@ -229,9 +250,6 @@ input[type=radio]:checked{
     .third{
         float: none;
         width: 100%;
-    }
-    aside{
-        display: none;
     }
     #whatWeDo h1{
         font-size: 2rem;

@@ -74,9 +74,13 @@ function Circle() {
         ctx.fill();
     };
 }
+
 let checkedSlide = 0;
 let buttons = document.getElementsByTagName('input');
 let slides = document.getElementsByTagName('label');
+let a = setInterval(()=>{
+    swipeLeft(checkedSlide)
+}, 3000);
 for (let i = 0; i < buttons.length; i++) {
     let startX = 0, endX = 0;
     slides[i].addEventListener('touchstart', (e) => {
@@ -94,6 +98,8 @@ for (let i = 0; i < buttons.length; i++) {
         else if (startX < endX)
             swipeRight(i);
     }, false);
+    slides[i].addEventListener("mousedown", mouseDown);
+    slides[i].addEventListener("mouseup", mouseUp);
 }
 function swipeLeft(i) {
     if(i!=buttons.length-1){
@@ -118,6 +124,14 @@ function swipeRight(i) {
         buttons[i].checked = false;
         checkedSlide = 5;
     }
+}
+function mouseDown() {
+    clearInterval(a);
+}
+function mouseUp() {
+    a = setInterval(()=>{
+        swipeLeft(checkedSlide)
+    }, 3000);
 }
 document.addEventListener('keydown', (e)=>{
     if(e.key=="ArrowRight")
