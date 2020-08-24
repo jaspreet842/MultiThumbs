@@ -26,6 +26,15 @@ label>h1, h2, p, button {
     font-family: 'Hattori Hanzo';
 }
 
+footer input, a, button, label{
+    font-family: 'Hattori Hanzo';
+}
+
+footer h3{
+    font-family: 'Adequate';
+    font-size: 1.5rem;
+}
+
 /* Navbar */
 
 .navbar {
@@ -623,7 +632,7 @@ footer {
 }
 
 .changeWidth{
-    width: 35%;
+    width: 34%;
 }
 
 /*----form within alert--*/
