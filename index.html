@@ -9,6 +9,7 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="floating-wpp.min.css">
 </head>
 
 <body>
@@ -228,6 +229,7 @@
             </div>
         </div>
     </footer>
+    <div id="myDiv"></div>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -241,10 +243,12 @@
     crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="js/services.js"></script>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="floating-wpp.min.js"></script>
 <script type="text/javascript">
     $(function () {
         $('#myDiv').floatingWhatsApp({
-            phone: '8800100021',
+            phone: 'https://web.whatsapp.com/+918800100021',
             showPopup: 'True',
             popupMessage: "Hello, How are you",
             message: "I need Help",

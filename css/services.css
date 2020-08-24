@@ -52,6 +52,7 @@ footer h3{
     font-size: 1.3rem;
     font-variant: small-caps;
     font-weight: bolder;
+    padding: 18px 25px;
     transition: 0.5s ease-in-out;
 }
 
