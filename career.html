@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/career.css">
+    <link rel="stylesheet" href="floating-wpp.min.css">
+    <!--<script src="career.js"></script>-->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md fixed-top scrolling-navbar">
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#Sticky-nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="Sticky-nav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="course.html">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="career.html">Career</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div id="headingBg" style="height: 70vh" !important>
+            <canvas id="c"></canvas>
+            <h1 class="animateHeading" id="heading">
+                <span>c</span>
+                <span>A</span>
+                <span>R</span>
+                <span>E</span>
+                <span>E</span>
+                <span>R</span>
+            
+            </h1>
+            <p id="headerContent">Join The Family</p>
+        </div>
+    </header>
+
+    <section class="container-fluid py-5" id="bgGrey">
+        <div id="whatWeDo">
+            <h1>CHOOSE A JOB YOU'LL LOVE</h1>
+        </div>
+        <div id="slider">
+            <input class="radioBtns" type="radio" name="slider" id="s1" checked>
+            <input class="radioBtns" type="radio" name="slider" id="s2">
+            <input class="radioBtns" type="radio" name="slider" id="s3">
+            <input class="radioBtns" type="radio" name="slider" id="s4">
+
+            <label class="slideNo" for="s1" id="slide1">
+                <h1 class="cardHead">
+                   
+                    <div class="cardTitle">Creative and passionate about everything digital?</div>
+                </h1>
+                <p class="cardContent">Get to work at a booming digital agency. We strongly believe that workspaces and environment make-up a crucial part of what you deliver. Together, we deliver excellent work while having a great time practicing our expertise in digital.</p>
+            </label>
+            <label class="slideNo" for="s2" id="slide2">
+                <h1 class="cardHead">
+                
+                    <div class="cardTitle">Our Prespective towards work</div>
+                </h1>
+                <p class="cardContent">We care about our work and the people we do it with. Join the Multithumbs Family to enjoy a competitive salary and a fantastic range of benefits. Life here is not just about monthly awards, performance bonuses, learning sessions and structured training and development programmes, but also about the fun stuff with lots of social activities in and outside office.</p>
+            </label>
+            <label class="slideNo" for="s3" id="slide3">
+                <h1 class="cardHead">
+                    
+                    <div class="cardTitle">Our Values</div>
+                </h1>
+                <p class="cardContent">At Multithumbs, we are proud of our team and encourage the efforts of all our bees in their achievements throughout their career with us. As a full-service agency, we strengthen ourselves by integrating each team to learn from one another.As a company, we have 4 specific values that we believe represent a successful working strategy: Taking Ownership, Thinking Smart, Supporting Others and Surprise and Delight.</p>
+            </label>
+            <label class="slideNo" for="s4" id="slide4">
+                <h1 class="cardHead">
+                    
+                    <div class="cardTitle">Our Enviorment</div>
+                </h1>
+                <p class="cardContent">As soon as you start working with us you will notice the vibrant atmosphere that hits you. As a company, we also want to encourage social awareness and are keen that we give a little back to the society in which we live and work. We share all ideas and recommendations to help drive the atmosphere in the working environment run smoothly and efficiently.</p>
+            </label>
+        </div>
+    </section>
+
+    <section class="third container-fluid text-center py-5" style="height: 60vh;" !important>
+        <h1 class="my-5">Contact Our HR</h1>
+        <hr>
+        <h2 class="my-3">For enquiries and applications , please send your resume along with a detailed cover letter at <a href='mailto:connect@multithumbs.in' style='text-decoration:none'>connect@multithumbs.in</a></h2>
+        
+    </section>
+
+    <footer>
+        <div class="row">
+            <div class="left container" style="background-color:#bbb;">
+                <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.."
+                    title="Type in a category">
+                <ul id="myMenu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="course.html">Courses</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="career.html">Career</a></li>
+                </ul>
+            </div>
+            <div class="right container">
+                <div class="d-flex flex-wrap justify-content-between changeDirection">
+                    <div class="p-2 flex-fill changeWidth">
+                        <h3><b>Multi Thumbs</b></h3>
+                        <img src="img/Logo.jpeg" alt="logo">
+                        <ul class="x6">
+                            <li><i>So what are you waiting for? We’re excited to join you on this journey of digital
+                                    transformation.Contact Us Now!</i></li>
+                    </div>
+                    <!--<div class="p-2 flex-fill">
+                        <h3><b>Addressing</b></h3>
+                        <ul class="x6">
+                            <li><i>Office address</i></a></li>
+                        </ul>
+                    </div>-->
+                    <div class="p-2 flex-fill">
+                        <h3><b>Important Links</b></h3>
+                        <ul class="x6">
+                            <li><i class="fa fa-podcast"></i> <a
+                                    href="https://anchor.fm/multi-thumbs/episodes/On-Page-SEO-Tutorial-for-Beginners-Tutorial-For-Beginners-Step-By-Step-How-To-Rank-No--1-On-Googl-eh3h49">Podcast</a>
+                            </li>
+                            <li><i class="fa fa-youtube"></i> <a
+                                    href="https://www.youtube.com/channel/UCjy6OvICoqSJ5W9xK9n4pCw">Youtube</a></li>
+                        </ul>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <h3><b>Contact us</b></h3>
+                        <ul class="x6">
+                            <!--<li><i>connect@multithumbs.in</i></li>
+                            <li><i> 8800100021</i></li>-->
+                            <li><i>Email ID : <a href='mailto:connect@multithumbs.in'>connect@multithumbs.in</a></i></li>
+                            <!--<li><i> 8800100021</i></li>-->
+                            <li><i>Phone Number : <a href="tel:8800100021">8800100021</a></i></li>
+                            <div id="div1" class="fa"></div>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="alert alert-info">
+                    <span class="closebtn">&times;</span>
+                    <strong>Info!</strong> Indicates a neutral informative change or action.
+                    <form class="form-inline" action="/action_page.php">
+                        <label for="Name">Name:</label>
+                        <input type="Name" id="Name" placeholder="Enter name" name="Name">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Enter email" name="email">
+                        <label for="suggestion">Suggestion:</label>
+                        <input type="suggestion" id="pwd" placeholder="Enter suggestion" name="suggestion">
+                        <label>
+                            <input type="checkbox" name="remember"> Remember me
+                        </label>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <hr>
+                <a class="btn btn-secondary" href="#" role="button"><i class="fa fa-arrow-up"></i>To the top</a>
+                <div class="container py-3 px-0">
+                    <i class="fa fa-facebook-official p-1" style="font-size: 1.75rem;"></i>
+                    <i class="fa fa-instagram p-1" style="font-size: 1.75rem;"></i>
+                    <i class="fa fa-google-plus p-1" style="font-size: 1.75rem;"></i>
+                    <i class="fa fa-twitter p-1" style="font-size: 1.75rem;"></i>
+                    <i class="fa fa-linkedin p-1" style="font-size: 1.75rem;"></i>
+                </div>
+                <p class="x6">&copy;Copyright © 2020 Multithumbs |</p>
+                <p>Powered by <a href="#" target="_blank">Multithumbs </a></p>
+            </div>
+        </div>
+    </footer>
+    <div id="myDiv"></div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/services.js"></script>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="floating-wpp.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#myDiv').floatingWhatsApp({
+            phone: 'https://web.whatsapp.com/+918800100021',
+            showPopup: 'True',
+            popupMessage: "Hello, How are you",
+            message: "I need Help",
+            position: 'right'
+        });
+    });
+</script>
+
+</html>

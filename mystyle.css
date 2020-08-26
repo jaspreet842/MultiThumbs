@@ -1,0 +1,501 @@
+@font-face {
+    font-family: 'adequate';
+    src: url('adequate/Adequate-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: 'hattori';
+    src: url('hattori-hanzo/hattori.otf');
+}
+
+h1 {
+    font-family: 'Adequate';
+    font-weight: 900;
+}
+
+label>h1, h3, h2, p, button {
+    font-family: 'hattori';
+}
+
+footer input, a, button, label, li {
+    font-family: 'hattori';
+}
+
+footer h3 {
+    font-family: 'Adequate';
+    font-size: 1.5rem;
+}
+
+/* template */
+
+.container {
+    position: relative;
+    margin: 0 auto;
+}
+
+.container-fluid img {
+    vertical-align: middle;
+}
+
+.container-fluid .content {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    /* Fallback color */
+    background: rgba(0, 0, 0, 0.5);
+    /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.a1 {
+    padding-left: 50%;
+}
+
+.b1 {
+    background-color: white;
+    float: right;
+}
+
+.container, .container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+#particles-js {
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(135deg, rgba(52, 152, 219, 0.7) 0%, rgba(243, 65, 65, 0.7) 100%), url("https://multithumbs.in/wp-content/uploads/2020/01/about-bg-img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    border-style: none;
+}
+
+#particles-js:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -50%;
+    width: 100%;
+    height: 20%;
+    background: white;
+    transform-origin: right;
+    transform: skewY(8deg);
+    border-style: none;
+}
+
+#particles-js:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: -50%;
+    width: 100%;
+    height: 20%;
+    background: white;
+    transform-origin: left;
+    transform: skewY(-8deg);
+    border-style: none;
+}
+
+#heading {
+    position: absolute;
+    text-align: center;
+    font-family: adequate;
+    top: 26%;
+    left: 50%;
+    font-size: 5em;
+    z-index: 1;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    transform: translate3d(-50%, -50%, 0);
+    display: flex;
+    justify-content: center;
+    transition: transform .3s ease-in-out;
+}
+
+#headerContent {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    padding: 2rem;
+    top: 47%;
+    left: 50%;
+    color: #f5f5f5;
+    z-index: 1;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    transform: translate3d(-50%, -50%, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform .3s ease-in-out;
+}
+
+#headerContent h2 {
+    font-size: 2.5rem;
+    font-family:adequate;
+}
+
+#headerContent p {
+    font-size: 1.5rem;
+    font-family:hattori;
+}
+
+#heading span {
+    display: block;
+    color: #ccc;
+    background-color: #fff;
+    border: 0.1px solid #ccc;
+    width: 90px;
+    height: 100px;
+}
+
+#heading span:nth-child(odd) {
+    transform: skewY(-15deg);
+}
+
+#heading span:nth-child(even) {
+    transform: skewY(15deg);
+}
+
+#heading:hover span {
+    transform: skewY(0deg);
+}
+
+@media only screen and (max-width:850px) {
+    #heading {
+        font-size: 4rem;
+    }
+    #heading span {
+        width: 70px;
+        height: 80px;
+    }
+    #headerContent h2 {
+        font-size: 2.2rem;
+    }
+    #headerContent p {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width:650px) {
+    #heading {
+        font-size: 3rem;
+    }
+    #heading span {
+        width: 50px;
+        height: 60px;
+    }
+    #headerContent {
+        top: 44%;
+        padding: 1rem;
+    }
+    #headerContent h2 {
+        font-size: 1.8rem;
+    }
+    #headerContent p {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    #heading {
+        font-size: 2.2rem;
+    }
+    #heading span {
+        width: 35px;
+        height: 45px;
+    }
+    #headerContent h2 {
+        font-size: 1.4rem;
+    }
+    #headerContent p {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width:350px) {
+    #heading {
+        font-size: 2rem;
+    }
+    #heading span {
+        width: 30px;
+        height: 40px;
+    }
+    #headerContent {
+        top: 45%;
+        padding: 0;
+    }
+    #headerContent h2 {
+        font-size: 1.2rem;
+    }
+    #headerContent p {
+        font-size: 1rem;
+    }
+}
+.card{
+    font-family:adequate;
+}
+.navbar {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.navbar-collapse ul {
+    margin: 0 auto;
+}
+
+.navbar-collapse ul li a {
+    font-family: adequate;
+    font-size: 1.3rem;
+    font-variant: small-caps;
+    font-weight: bolder;
+    padding: 25px;
+    transition: 0.5s ease-in-out;
+}
+
+.navbar-collapse ul li a:hover {
+    background-color: #d2d1d485;
+}
+
+.navbar-collapse a {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+}
+
+@media only screen and (max-width: 920px) and (min-width: 766px) {
+    .navbar-collapse ul li a {
+        font-size: 1rem;
+    }
+}
+
+.x1 {
+    font-size: 20px;
+    color: blue;
+}
+
+#tab1 {
+    margin-top: 2px;
+    color: black;
+}
+
+/*--form--*/
+
+#features {
+    text-align: center;
+    margin: 0px 0px 20px;
+}
+
+.x3 {
+    font-size: 18px;
+    color: black;
+    line-height: 24px;
+    text-align: left;
+}
+
+.x4 {
+    color: black;
+    font-size: 18px;
+}
+
+.x5 {
+    color: #02075d;
+    text-transform: uppercase;
+}
+
+.w3-container {
+    background-color: #f5f5f5;
+}
+
+/* Footer Section */
+
+footer {
+    background-color: #D3D3D3;
+    color: black;
+    font-size: 18px;
+    padding-top: 2rem;
+}
+
+/*----search box---*/
+
+/* Create a column layout with Flexbox */
+
+.row {
+    display: flex;
+    margin: 0;
+}
+
+/* Left column (menu) */
+
+.left {
+    width: 18%;
+    padding: 15px 0;
+    margin: 10px;
+    float: left;
+}
+
+/* Right column (page content) */
+
+.right {
+    width: 78%;
+    padding: 15px;
+}
+
+/* Style the search box */
+
+#mySearch {
+    width: 90%;
+    font-size: 20px;
+    padding: 11px;
+    border: 1px solid #ddd;
+    margin-left: 10px;
+}
+
+/* Style the navigation menu inside the left column */
+
+#myMenu {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 10px;
+}
+
+#myMenu li a {
+    padding: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    display: block;
+    margin-left: 7px;
+}
+
+#myMenu li a:hover {
+    background-color: #D3D3D3;
+}
+
+.x6 {
+    list-style: none;
+    padding-left: 0;
+}
+
+.x6 li, .x6 a {
+    color: black;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.x6 a:hover {
+    color: white;
+}
+
+.x7 h3, .x7 img {
+    color: black;
+    padding-left: 50px;
+}
+
+#div1 {
+    font-size: 48px;
+}
+
+.changeWidth {
+    width: 35%;
+}
+
+/*----form within alert--*/
+
+.form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.form-inline label {
+    margin: 5px 10px 5px 0;
+    font-size: 16px;
+}
+
+.form-inline input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    font-size: 13px;
+}
+
+.form-inline button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.form-inline button:hover {
+    background-color: royalblue;
+}
+
+@media (max-width: 800px) {
+    .form-inline input {
+        margin: 10px 0;
+    }
+    .form-inline {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .alert {
+        padding: 10%;
+        background-color: #f44336;
+        color: white;
+        opacity: 1;
+        transition: opacity 0.6s;
+        margin-bottom: 15px;
+    }
+    .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 70px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .closebtn:hover {
+        color: black;
+    }
+}
+
+@media (max-width: 650px) {
+    .row {
+        flex-direction: column;
+        align-content: center;
+    }
+    .left, .right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .changeDirection {
+        flex-direction: column;
+    }
+    .changeWidth {
+        width: 100%;
+    }
+}
+.alert{
+    font-family:hattori;
+}

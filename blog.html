@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+    <!-- Start of Async Callbell Code -->
+    <!-- <script>
+        window.callbellSettings = {
+            token: "nDZABmxeMssnVrC4yCF8wutq"
+        };
+    </script>
+    <script>
+        (function () { var w = window; var ic = w.callbell; if (typeof ic === "function") { ic('reattach_activator'); ic('update', callbellSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Callbell = i; var l = function () { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://dash.callbell.eu/include/' + window.callbellSettings.token + '.js'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); }; if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()
+    </script> -->
+    <!-- End of Async Callbell Code -->
+
+
+    <title>Blog</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="floating-wpp.min.css">
+    <style>
+        #background {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: black;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            border-style: none;
+        }
+
+        #background:before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: -50%;
+            width: 100%;
+            height: 20%;
+            background: white;
+            transform-origin: right;
+            transform: skewY(8deg);
+            border-style: none;
+        }
+
+        #background:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            right: -50%;
+            width: 100%;
+            height: 20%;
+            background: white;
+            transform-origin: left;
+            transform: skewY(-8deg);
+            border-style: none;
+        }
+
+        @font-face {
+            font-family: 'adequate';
+            src: url('adequate/Adequate-ExtraLight.ttf');
+        }
+        @font-face{
+            font-family:'hattori';
+            src:url('hattori-hanzo/hattori.otf');
+            }
+
+        .heading {
+            color: white;
+            font-family: adequate;
+            font-size: 10vw;
+            margin: 170px auto;
+        }
+    </style>
+
+    <style type="text/css">
+        body,
+        h5 {
+            margin: 0;
+            padding: 0;
+            font-family: adequate;
+            background-color: floralwhite;
+            /*0background-image: url('{% static 'images/blogbg.jpg'%}');*/
+        }
+
+        section {
+            width: 100%;
+            height: 650px;
+
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(252, 252, 253, 0.7);
+        }
+
+        .text-container h5 {
+            font-size: 80px;
+            color: rgba(225, 225, 225, .1);
+            background-image:url('{% static images/color1.jpg%}');
+            background-repeat: repeat-x;
+            -webkit-background-clip: text;
+            animation: animate 15s linear infinite;
+        }
+
+        @keyframes animate {
+            10% {
+                background-position: left 0px top 10px;
+            }
+
+            50% {
+                background-position: left 0px top 10px;
+            }
+
+        }
+
+        .text-container {
+            margin-top: 17px;
+            text-align: center;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top navbar-expand-md  scrolling-navbar">
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#Sticky-nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="Sticky-nav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="course.html">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="career.html">Career</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <style>
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.4);
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .navbar-collapse ul {
+            margin: 0 auto;
+        }
+
+        .navbar-collapse ul li a {
+            font-family: adequate;
+            font-size: 1.5rem;
+            font-variant: small-caps;
+            font-weight: bolder;
+            padding: 25px;
+            transition: 0.5s ease-in-out;
+        }
+
+        .navbar-collapse ul li a:hover {
+            background-color: #d2d1d485;
+        }
+
+        .navbar-collapse a {
+            margin-left: 10px;
+            margin-right: 10px;
+            color: white;
+        }
+    </style>
+    <!-- Header Starts-->
+
+    <header>
+        <div id="headingBg" style="height: 70vh" !important>
+            <canvas id="c"></canvas>
+            <h1 class="animateHeading" id="heading">
+                <span>B</B></span>
+                <span>L</span>
+                <span>O</span>
+                <span>G</span>
+                <span>S</span>
+
+            </h1>
+            <p id="headerContent">Blogs for You!</p>
+        </div>
+    </header>
+
+    <!--Styling for Header-->
+    <style>
+        #headingBg {
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(135deg, rgba(52, 152, 219, 0.7) 0%, rgba(243, 65, 65, 0.7) 100%), url("https://multithumbs.in/wp-content/uploads/2020/01/about-bg-img.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        #headingBg:before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: -50%;
+            width: 100%;
+            height: 22%;
+            background: #d5dede;
+            transform-origin: right;
+            transform: skewY(8deg);
+            border-style: none;
+        }
+
+        #headingBg:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            right: -50%;
+            width: 100%;
+            height: 22%;
+            background: #d5dede;
+            transform-origin: left;
+            transform: skewY(-8deg);
+            border-style: none;
+        }
+
+        /* Text Heading with paper fold animation.*/
+
+        #heading {
+            position: absolute;
+            text-align: center;
+            top: 35%;
+            left: 50%;
+            font-size: 5em;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+            transform: translate3d(-50%, -50%, 0);
+            display: flex;
+            justify-content: center;
+            transition: transform .3s ease-in-out;
+        }
+
+        #heading span {
+            display: block;
+            color: #ccc;
+            background-color: #fff;
+            border: 0.1px solid #ccc;
+            width: 90px;
+            height: 100px;
+        }
+
+        #heading span:nth-child(odd) {
+            transform: skewY(-15deg);
+        }
+
+        #heading span:nth-child(even) {
+            transform: skewY(15deg);
+        }
+
+        #heading:hover span {
+            transform: skewY(0deg);
+        }
+
+        /* Header's Content  */
+
+        #headerContent {
+            position: absolute;
+            width: 100%;
+            color: #fff;
+            text-align: center;
+            top: 60%;
+            left: 50%;
+            font-weight: normal;
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            transform: translate3d(-50%, -50%, 0);
+        }
+
+        /* Responsive Design for whole header */
+
+        @media only screen and (max-width:750px) {
+            #heading {
+                font-size: 4rem;
+            }
+
+            #heading span {
+                width: 70px;
+                height: 80px;
+            }
+        }
+
+        @media only screen and (max-width:600px) {
+            #heading {
+                font-size: 3rem;
+            }
+
+            #heading span {
+                width: 50px;
+                height: 60px;
+            }
+
+            #headerContent {
+                font-size: 1.45rem;
+            }
+        }
+
+        @media only screen and (max-width:400px) {
+            #heading {
+                font-size: 2.2rem;
+            }
+
+            #heading span {
+                width: 35px;
+                height: 45px;
+            }
+
+            #headerContent {
+                top: 35%;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+
+
+    <!--JS Script For Header-->
+
+    <script>
+        let width, height, largeContainer, canvas, ctx, circles, target, animateHeader = true;
+        initHeader();
+        addListeners();
+        function initHeader() {
+            width = window.innerWidth / 1.03;
+            height = window.innerHeight / 1.435;
+            target = { x: 0, y: height };
+            largeContainer = document.getElementById('headingBg');
+            largeContainer.style.height = 70 + 'vh';
+            canvas = document.getElementById('c');
+            canvas.width = width;
+            canvas.height = height;
+            ctx = canvas.getContext('2d');
+            // create particles
+            circles = [];
+            for (let x = 0; x < width * 0.5; x++) {
+                let c = new Circle();
+                circles.push(c);
+            }
+            animate();
+        }
+
+        // Event handling
+        function addListeners() {
+            window.addEventListener('scroll', scrollCheck);
+            window.addEventListener('resize', resize);
+        }
+
+        function scrollCheck() {
+            if (document.body.scrollTop > height)
+                animateHeader = false;
+            else
+                animateHeader = true;
+        }
+
+        function resize() {
+            width = window.innerWidth / 1.03;
+            height = (window.innerHeight) / 1.5;
+            largeContainer.style.height = 70 + 'vh';
+            canvas.width = width;
+            canvas.height = height;
+        }
+
+        function animate() {
+            if (animateHeader) {
+                ctx.clearRect(0, 0, width, height);
+                for (let i in circles)
+                    circles[i].draw();
+            }
+            requestAnimationFrame(animate);
+        }
+
+        // Canvas manipulation
+        function Circle() {
+            var _this = this;
+            _this.pos = {};
+            init();
+            function init() {
+                _this.pos.x = Math.random() * width;
+                _this.pos.y = height + Math.random() * 100;
+                _this.alpha = 0.1 + Math.random() * 0.3;
+                _this.scale = 0.1 + Math.random() * 0.3;
+                _this.velocity = Math.random();
+            }
+
+            this.draw = function () {
+                if (_this.alpha <= 0)
+                    init();
+                _this.pos.y -= _this.velocity;
+                _this.alpha -= 0.0005;
+                ctx.beginPath();
+                ctx.arc(_this.pos.x, _this.pos.y, _this.scale * 10, 0, 2 * Math.PI, false);
+                ctx.fillStyle = 'rgba(255,255,255,' + _this.alpha + ')';
+                ctx.fill();
+            };
+        }
+    </script>
+
+    <!--<section>
+        <div class="overlay"></div>
+    </section>-->
+    <div class="text-container">
+        <h5>Blogs</h5>
+    </div>
+
+
+    <style>
+        .iframe-container {
+            position: relative;
+            max-width: 500%;
+            padding-bottom: 10%;
+            height: 150;
+        }
+
+        .iframe-container iframe {
+            position: relative;
+            top: 00;
+            left: 00;
+            align: center;
+            max-width: 500%;
+            height: 150;
+        }
+    </style>
+
+    
+
+    <center>
+        <h1>
+            <p style="font-family:adequate;">How to Build a Personal Brand by Using 8 tips, How to Grow Your Brand
+                Online !</p>
+    </center>
+    </h1>
+
+    <center><iframe width="1000" height="400" src="https://www.youtube.com/embed/Sk39Kjug0jY" frameborder="10"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </center>
+
+    </br>
+    <br>
+    <br>
+    <center>
+        <h1>
+            <p style="font-family:adequate;">How Coronavirus Is Impacting Businesses and helping some industry !</p>
+    </center>
+    </h1>
+    <center><iframe width="1000" height="400" src="https://www.youtube.com/embed/_6SkNicmXOc" frameborder="10"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </center>
+    </br>
+    </br>
+
+
+
+    <!--Footer's HTML:-->
+
+    <br>
+    <footer>
+        <div class="row">
+            <div class="left container" style="background-color:#bbb;">
+                <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.."
+                    title="Type in a category">
+                <ul id="myMenu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="course.html">Courses</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="career.html">Career</a></li>
+                </ul>
+            </div>
+            <div class="right container">
+                <div class="d-flex flex-wrap justify-content-between changeDirection">
+                    <div class="p-2 flex-fill changeWidth">
+                        <h3><b>Multi Thumbs</b></h3>
+                        <img src="https://multithumbs.in/wp-content/uploads/2020/07/cropped-newlogowhite-8.jpeg"
+                            alt="logo">
+                        <ul class="x6">
+                            <li><i>So what are you waiting for? We’re excited to join you on this journey of digital
+                                    transformation.Contact Us Now!</i></li>
+                    </div>
+                    <!--<div class="p-2 flex-fill">
+                        <h3><b>Addressing</b></h3>
+                        <ul class="x6">
+                            <li><i>Office address</i></a></li>
+                        </ul>
+                    </div>-->
+                    <div class="p-2 flex-fill">
+                        <h3><b>Important Links</b></h3>
+                        <ul class="x6">
+                            <li><i class="fa fa-podcast"></i> <a
+                                    href="https://anchor.fm/multi-thumbs/episodes/On-Page-SEO-Tutorial-for-Beginners-Tutorial-For-Beginners-Step-By-Step-How-To-Rank-No--1-On-Googl-eh3h49">Podcast</a>
+                            </li>
+                            <li><i class="fa fa-youtube"></i> <a
+                                    href="https://www.youtube.com/channel/UCjy6OvICoqSJ5W9xK9n4pCw">Youtube</a></li>
+                        </ul>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <h3><b>Contact us</b></h3>
+                        <ul class="x6">
+                            <!--<li><i>Email id:info@demolink.org</i></li>-->
+                            <li><i>Email ID : <a href='mailto:connect@multithumbs.in'>connect@multithumbs.in</a></i>
+                            </li>
+                            <li><i>Phone Number : <a href="tel:8800100021">8800100021</a></i></li>
+                            <div id="div1" class="fa"></div>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="alert alert-info">
+                    <span class="closebtn">&times;</span>
+                    <strong>Info!</strong> Indicates a neutral informative change or action.
+                    <form class="form-inline" action="/action_page.php">
+                        <label for="Name">Name:</label>
+                        <input type="Name" id="Name" placeholder="Enter name" name="Name">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Enter email" name="email">
+                        <label for="suggestion">suggestion:</label>
+                        <input type="suggestion" id="pwd" placeholder="Enter suggestion" name="suggestion">
+                        <label>
+                            <input type="checkbox" name="remember"> Remember me
+                        </label>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <hr>
+                <a class="btn btn-secondary" href="#" role="button"><i class="fa fa-arrow-up"></i>To the top</a>
+                <div class="container py-3 px-0">
+                    <i class="fa fa-facebook-official p-1" style="font-size: 1.75rem;"></i>
+                    <i class="fa fa-instagram p-1" style="font-size: 1.75rem;"></i>
+                    <i class="fa fa-google-plus p-1" style="font-size: 1.75rem;"></i>
+                    <i class="fa fa-twitter p-1" style="font-size: 1.75rem;"></i>
+                    <i class="fa fa-linkedin p-1" style="font-size: 1.75rem;"></i>
+                </div>
+                <p class="x6">&copy;Copyright © 2020 Multithumbs |</p>
+                <p>Powered by <a href="#" target="_blank">Multithumbs </a></p>
+            </div>
+        </div>
+        <div id="myDiv"></div>
+    </footer>
+
+
+
+    <!--Footer's  CSS:-->
+
+
+    <!--/* Footer Section */-->
+    <style>
+        footer {
+            background-color: #D3D3D3;
+            color: black;
+            font-size: 18px;
+            padding-top: 2rem;
+        }
+
+        footer li,
+        input,
+        a,
+        button,
+        label {
+            font-family: hattori;
+        }
+
+        footer h3 {
+            font-family: adequate;
+            font-size: 1.5rem;
+        }
+
+        /*----search box---*/
+
+        /* Create a column layout with Flexbox */
+
+        .row {
+            display: flex;
+            margin: 0;
+        }
+
+        /* Left column (menu) */
+
+        .left {
+            width: 18%;
+            padding: 15px 0;
+            margin: 10px;
+            float: left;
+        }
+
+        /* Right column (page content) */
+
+        .right {
+            width: 78%;
+            padding: 15px;
+        }
+
+        /* Style the search box */
+
+        #mySearch {
+            width: 90%;
+            font-size: 20px;
+            padding: 11px;
+            border: 1px solid #ddd;
+            margin-left: 10px;
+        }
+
+        /* Style the navigation menu inside the left column */
+
+        #myMenu {
+            list-style-type: none;
+            padding: 0;
+            margin-left: 10px;
+        }
+
+        #myMenu li a {
+            padding: 12px;
+            text-decoration: none;
+            font-size: 15px;
+            color: black;
+            display: block;
+            margin-left: 7px;
+        }
+
+        #myMenu li a:hover {
+            background-color: #D3D3D3;
+        }
+
+        .x6 {
+            list-style: none;
+        }
+
+        .x6 li,
+        .x6 a {
+            color: black;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        .x6 a:hover {
+            color: white;
+        }
+
+        .x7 h3,
+        .x7 img {
+            color: black;
+            padding-left: 50px;
+        }
+
+        #div1 {
+            font-size: 48px;
+        }
+
+        .changeWidth {
+            width: 35%;
+        }
+
+        /*----form within alert--*/
+
+        .form-inline {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+        }
+
+        .form-inline label {
+            margin: 5px 10px 5px 0;
+            font-size: 16px;
+        }
+
+        .form-inline input {
+            vertical-align: middle;
+            margin: 5px 10px 5px 0;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            font-size: 13px;
+        }
+
+        .form-inline button {
+            padding: 10px 20px;
+            background-color: dodgerblue;
+            border: 1px solid #ddd;
+            color: white;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .form-inline button:hover {
+            background-color: royalblue;
+        }
+
+        @media (max-width: 800px) {
+            .form-inline input {
+                margin: 10px 0;
+            }
+
+            .form-inline {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .alert {
+                padding: 10%;
+                background-color: #f44336;
+                color: white;
+                opacity: 1;
+                transition: opacity 0.6s;
+                margin-bottom: 15px;
+            }
+
+            .closebtn {
+                margin-left: 15px;
+                color: white;
+                font-weight: bold;
+                float: right;
+                font-size: 70px;
+                line-height: 20px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            .closebtn:hover {
+                color: black;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .row {
+                flex-direction: column;
+                align-content: center;
+            }
+
+            .left,
+            .right {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .changeDirection {
+                flex-direction: column;
+            }
+
+            .changeWidth {
+                width: 100%;
+            }
+        }
+    </style>
+
+
+    <!--Footer's JavaScript:-->
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myMenu");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+        // Smiley in Footer's right section
+        function smile() {
+            var a;
+            a = document.getElementById("div1");
+            a.innerHTML = "&#xf118;";
+            setTimeout(function () {
+                a.innerHTML = "&#xf11a;";
+            }, 1000);
+            setTimeout(function () {
+                a.innerHTML = "&#xf119;";
+            }, 2000);
+            setTimeout(function () {
+                a.innerHTML = "&#xf11a;";
+            }, 3000);
+        }
+        smile();
+        setInterval(smile, 4000);
+        var close = document.getElementsByClassName("closebtn");
+        var i;
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function () {
+                var div = this.parentElement;
+                div.style.opacity = "0";
+                setTimeout(function () { div.style.display = "none"; }, 600);
+            }
+        }
+    </script>
+
+
+    <!--Whata App-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+    <script src="floating-wpp.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#myDiv').floatingWhatsApp({
+                phone: 'https://web.whatsapp.com/+918800100021',
+                showPopup: 'True',
+                popupMessage: "Hello, How are you",
+                headerTitle: "Whatsapp Chat",
+                message: "I Need Help",
+                position: 'right'
+            });
+        });
+    </script>
+
+</body>
+
+
+</html>
